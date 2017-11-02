@@ -65,7 +65,7 @@ spec:
             fieldRef:
               fieldPath: status.podIP
         - name: PORT
-          value: "8082"
+          value: "8081"
         - name: SYSTEM_PROPS # additional options to be passed to the running process
           value: "{{systemProps}}"
         - name: SPRING_PROFILES_ACTIVE
@@ -73,13 +73,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 8082
+            port: 8081
           initialDelaySeconds: 30
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /health
-            port: 8082
+            port: 8081
           initialDelaySeconds: 30
           periodSeconds: 3
         image: docker.io/istio/proxy_debug:0.2.4
