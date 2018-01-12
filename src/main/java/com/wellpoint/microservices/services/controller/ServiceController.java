@@ -66,7 +66,7 @@ public class ServiceController {
 		return message;
 	}
 	
-	@RequestMapping(value = "/health", method = RequestMethod.GET)
+	@RequestMapping(value = "/hello-worldhealth", method = RequestMethod.GET)
 	public String healthCheck()
 
 	{
